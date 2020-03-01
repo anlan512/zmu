@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Welcom|贵州农业职业学院信息工程系</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/ddfullscreenslider.js"></script>
+</head>
+<body>
+
+<div id="music">
+	<audio id="myAudio">
+		<source src="music/m.flac" type="audio/mpeg">
+		Your browser does not support the audio element.
+	</audio>
+	<audio src="music/.flac" controls="controls" autoplay hidden="true" style="display:none;"/>
+</div>
+
+<div class="fixtop">
+</div>
+<div class="fixtoptext">
+	<div class="logo">
+		贵州农校19计网<font style="color:pink;">·</font>beta开发组
+	</div>
+	<div class="menu">
+		<a href="https://space.bilibili.com/35472309?share_medium=android&share_source=copy_link&bbid=XY0092702314A722306F8755ACA997750FCC6&ts=1583048053139
+">哔站</a> <a href="https://github.com/anlan512">GitHub 安澜</a> <a href="https://me.csdn.net/weixin_43491998">CSDN _星子放入眸</a><a href="https://anlan512.github.io/his/#/login">在线系统</a> <a href="./DOWNLOAD/head.html">资料下载</a><a href="https://anlan512.github.io/wt/">静态网页展示</a>
+	</div>
+	<div class="musicblock">
+		<img src="images/music.jpg" class="xwcms animation"/>
+		<p>	Wubba lubba dub dub!</P>
+	</div>
+</div>
+<section id="youtiy" class="dd_fullscreenslider">
+	<div class="slidewrapper">
+		<article class="slide">
+			<div class="slide1_content">
+			</div>
+			<div class="slide1_content_text">
+				<div class="caption">关于开发组</div>
+				<div class="cut"></div>
+				<div class="lovesay"  style="letter-spacing:2px">
+					<div>
+					<font class="fontsytle">目前</font>整个开发组只有我一个人，欢迎各位加入我的开发组，目前在做项目有：医院内部管理系统（his-his）、OJ系统（评测机）以及一些静态网页。计算机相关专业，除了掌握基本的理论知识最重要的就是实践了，组开发组，好处是能快速上手，拥有丰富的项目经验。
+					<p><a href="mailto:rangrangtian@gmail.com">（点我发送简历）</a></p>
+					</div>
+				</div>
+			</div>
+		</article>
+</section>
+<script>
+var fss;
+$(function() {
+	fss = new ddfullscreenslider({
+		sliderid: 'youtiy'
+	});
+	
+	var aa = $(".slide1_content").innerHeight();
+    $(".slide1_content").css('width',aa);
+	$(".slide1_content_text").css('width',aa);
+});
+</script>
+
+
+<script>
+	$(document).ready(function() {	
+		$(".xwcms").removeClass("animation");
+		$(".xwcms").on("click", function() {
+			$(".xwcms").addClass("animation");
+			$(this).toggleClass("pause");
+			var audio = $("#music audio")[0];
+			if (audio.paused) {
+				$(".xwcms").addClass("animation");
+				audio.play();
+			} else {
+				$(".xwcms").removeClass("animation");
+				audio.pause();
+			}
+			audio.addEventListener('ended', function () {  
+				$(".xwcms").removeClass("animation");
+			}, false);
+		});
+	});
+	
+
+</script>
+
+</body>
+</html>
