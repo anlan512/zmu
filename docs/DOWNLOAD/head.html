@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Scatter-download</title>
+        <link rel="stylesheet" href="css/style.css">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/jquery.mousewheel.min.js"></script>
+<script src="js/ddfullscreenslider.js"></script>
+        <link rel="icon" type="image/icon" href="assets/images/tabicon.ico">
+
+        <link rel="stylesheet" type="text/css" href="">
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="assets/css/bootstrap-theme.min.css" rel="stylesheet">
+        <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,700i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,700,700i|Josefin+Sans:700" rel="stylesheet">
+        <link href="assets/css/main.css" rel="stylesheet">
+        <link rel="icon" href="assets/images/head.jpg">
+        <link rel="stylesheet" href="assets/css/animate.min.css">
+        
+    </head>
+
+    <body>
+        <div id="music">
+    <audio id="myAudio" >
+        <source src="music/m.flac" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <audio src="music/.flac" controls="controls"  hidden="true" style="display:none;"/>
+</div>
+
+<div class="fixtop">
+</div>
+<div class="fixtoptext">
+    <div class="logo">
+        <font style="color:pink;">·</font>
+    </div>
+    <div class="menu">
+        <a href="https://space.bilibili.com/67112598?from=search&seid=3013573659277432751">(゜-゜)つロ 干杯~-bilibili</a> <a href="https://www.csdn.net/">csdn</a> <a href="https://www.artstation.com/">artstation</a>
+    </div>
+    <div class="musicblock">
+        <img src="images/music.png" class="xwcms animation"/>
+        <p>Jay Chou:半岛铁盒</P>
+    </div>
+</div>
+<section id="youtiy" class="dd_fullscreenslider">
+        <div id="index">                                           <!-- Index starts here -->
+            <div class="container main">
+                <div class="row home">
+                    <div id = "index_left" class="col-md-6 left">
+                        <img class="img-responsive img-rabbit1" src="assets/images/about.jpg" alt="图片" align="center"/>
+                    </div>
+                    <div id = "index_right" class="col-md-6 text-center right">
+                        <div class="logo">
+                            <img src="assets/images/head.jpg" style="width:111px;" alt="图片" align="center"/>
+                            <h4>I am anlan</h4>
+                        </div>
+                        <p class="home-description">
+                            我是安澜，我热衷于我所做的一切。
+                        </p>
+                        <div class="btn-group-vertical custom_btn animated slideinright">
+                            <div id="about" class="btn btn-rabbit"><a href="../index.html"><font color="000000">返回主页</font></a></div>
+                            <div><ol type="1">
+                                <li><a href="./C.html"><font color="000000">C#</font></a></li>
+                                <li><a href="./DB.html"><font color="000000">数据库</font></a></li>
+                                <li><a href="./Java.html"><font color="000000">java</font></a></li>
+                                <li><a href="./jiepou.html"><font color="000000">解剖学</font></a></li>
+                                <li><a href="./linchaung.html"><font color="000000">临床医学</font></a></li>
+                                <li><a href="./lisan.html"><font color="000000">离散数学</font></a></li>
+                                <li><a href="./软件设计基础.html"><font color="000000">软件设计基础</font></a></li>
+                                <li><a href="./数据结构.html"><font color="000000">数据结构</font></a></li>
+                                <li><a href="./数字逻辑.html"><font color="000000">数字逻辑</font></a></li>
+                            </ol>
+                            <ol type="a"></div>
+                        </div>      
+                    </div>
+                </div>
+            </div>
+        </div> 
+            <footer class="text-center">
+                <div class="container bottom">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <!--<p>Copyright&copy;2019&nbsp;|Scatter&nbsp;All&nbsp;Rights&nbsp;Reserved|<a harf="http://beian.miitbeian.gov.cn">黔ICP备19008609号</a></p>-->
+                            <!--<p>Made with <i class="fa fa-heartbeat" aria-hidden="true"></i> by <a href="#">Themewagon</a> More <a href="http://www.youtiy.com/" target="_blank" title="安澜">安澜</a> - Collect from <a href=" " title="rrt" target="_blank">rrt</a></p>-->
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>                                                              <!-- Contact ends here -->
+        <script src="assets/js/jquery-3.1.0.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/script.js"></script>
+        <div class="agileits_w3layouts-footer text-center">
+  <div class="container">
+    <p>Copyright&copy;2019&nbsp;|Scatter&nbsp;All&nbsp;Rights&nbsp;Reserved|<!--<a harf="http://beian.miitbeian.gov.cn">-->黔ICP备19008609号<!--</a>--></p>                                                     <!-- index ends here -->
+    </div>
+        </div>
+        <script>
+    $(document).ready(function() {  
+        $(".xwcms").removeClass("animation");
+        $(".xwcms").on("click", function() {
+            $(".xwcms").addClass("animation");
+            $(this).toggleClass("pause");
+            var audio = $("#music audio")[0];
+            if (audio.paused) {
+                $(".xwcms").addClass("animation");
+                audio.play();
+            } else {
+                $(".xwcms").removeClass("animation");
+                audio.pause();
+            }
+            audio.addEventListener('ended', function () {  
+                $(".xwcms").removeClass("animation");
+            }, false);
+        });
+    });
+    
+
+</script>
+    </body>
+</html>
